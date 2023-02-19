@@ -146,9 +146,8 @@ This project involves applying object detection techniques to detect vehicles an
 
 ### Dataset
 
-The images in the dataset are annotated with bounding boxes around objects of interest and corresponding labels that identify the type of object. These annotations are created manually by human annotators or using automated tools that use computer vision algorithms to detect and label objects in the images.#### Cross validation
-This section should detail the cross validation strategy and justify your approach. The purpose of providing prelabeled ground truth bounding boxes and labels is to train and evaluate object detection models. The models learn to detect objects in new images by analyzing the patterns and features of the annotated images.
-prelabeled ground truth bounding boxes and labels such as cars, pedestrians and bycicles.  
+The images in the dataset are annotated with bounding boxes around objects of interest and corresponding labels that identify the type of object. 
+The purpose of providing prelabeled ground truth bounding boxes and labels is to train and evaluate object detection models. The models learn to detect objects in new images by analyzing the patterns and features of the annotated images.
 
 
 | ![](imgs/eda/img2.PNG)  |  ![](imgs/eda/img3.PNG) |
@@ -156,7 +155,40 @@ prelabeled ground truth bounding boxes and labels such as cars, pedestrians and 
 
 ### Training
 #### Reference experiment
-This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
+The reference experiment was executed using the "ssd_resnet50_v1_fpn_640x640" model with a batch size of 2 and without data augmentation techniques. The "ssd_resnet50_v1_fpn_640x640" model is a single shot detection model that uses a ResNet50 backbone and a feature pyramid network for object detection. 
 
+
+![](imgs/train/first/tboard_train.png) 
+
+
+The training results of the reference experiment were as follows:
+
+- Localization loss: 1.07
+- Classification loss: 0.63
+- Regularization loss: 5.97
+- Total loss: 7.68
+
+
+- 
 #### Improve on the reference
-This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
+To improve the training results, the following data augmentation techniques were applied:
+
+- Random pixel value scale
+- Random adjust brightness
+- Random adjust contrast
+- Random adjust hue
+- Random distort color
+- Random adjust saturation
+
+
+![](imgs/train/second/tboard_train_losss.PNG) 
+
+
+As a result of applying the data augmentation techniques, there was some improvement in the loss of the model:
+
+- Localization loss: 0.98,
+- Classification loss: 0.72,
+- Regularization loss: 2.23,
+- Total loss: 3.93
+
+This shows that the data augmentation techniques helped to improve the model's performance by reducing the total loss. The improvements in the localization and classification losses indicate that the model is making more accurate predictions about the object bounding boxes and labels in the images. The reduction in the regularization loss indicates that the model is less prone to overfitting the training data. Overall, the results demonstrate that data augmentation techniques can be effective in improving the performance of object detection models.
