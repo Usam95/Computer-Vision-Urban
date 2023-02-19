@@ -141,16 +141,14 @@ python inference_video.py --labelmap_path label_map.pbtxt --model_path experimen
 ## Submission Template
 
 ### Project overview
-This section should contain a brief description of the project and what we are trying to achieve. Why is object detection such an important component of self driving car systems?
+This project involves applying object detection techniques to detect vehicles and pedestrians in urban environments camera sensor data. The goal is to create a robust and accurate object detection system that can detect and track objects in various scenarios. The project uses the TensorFlow object detection API and involves tasks such as data preparation, model training, and evaluation.
 
-### Set up
-This section should contain a brief description of the steps to follow to run the code for this repository.
 
 ### Dataset
-#### Dataset analysis
-This section should contain a quantitative and qualitative description of the dataset. It should include images, charts and other visualizations.
-#### Cross validation
-This section should detail the cross validation strategy and justify your approach.
+
+The images in the dataset are annotated with bounding boxes around objects of interest and corresponding labels that identify the type of object. These annotations are created manually by human annotators or using automated tools that use computer vision algorithms to detect and label objects in the images.#### Cross validation
+This section should detail the cross validation strategy and justify your approach. The purpose of providing prelabeled ground truth bounding boxes and labels is to train and evaluate object detection models. The models learn to detect objects in new images by analyzing the patterns and features of the annotated images.
+prelabeled ground truth bounding boxes and labels such as cars, pedestrians and bycicles.  
 
 ### Training
 #### Reference experiment
