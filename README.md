@@ -150,6 +150,10 @@ The images in the dataset are annotated with bounding boxes around objects of in
 This section should detail the cross validation strategy and justify your approach. The purpose of providing prelabeled ground truth bounding boxes and labels is to train and evaluate object detection models. The models learn to detect objects in new images by analyzing the patterns and features of the annotated images.
 prelabeled ground truth bounding boxes and labels such as cars, pedestrians and bycicles.  
 
+
+| ![](imgs/eda/img2.PNG)  |  ![](imgs/eda/img3.PNG) |
+| ![](imgs/eda/img4.PNG)  |  ![](imgs/eda/img5.PNG) |
+
 ### Training
 #### Reference experiment
 This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
