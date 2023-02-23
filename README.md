@@ -137,22 +137,3 @@ Finally, you can create a video of your model's inferences for any tf record fil
 ```
 python inference_video.py --labelmap_path label_map.pbtxt --model_path experiments/reference/exported/saved_model --tf_record_path /data/waymo/testing/segment-12200383401366682847_2552_140_2572_140_with_camera_labels.tfrecord --config_path experiments/reference/pipeline_new.config --output_path animation.gif
 ```
-
-## Submission Template
-
-### Project overview
-This project involves applying object detection techniques to detect vehicles and pedestrians in urban environments camera sensor data. The goal is to create a robust and accurate object detection system that can detect and track objects in various scenarios. The project uses the TensorFlow object detection API and involves tasks such as data preparation, model training, and evaluation.
-
-
-### Dataset
-
-The images in the dataset are annotated with bounding boxes around objects of interest and corresponding labels that identify the type of object. These annotations are created manually by human annotators or using automated tools that use computer vision algorithms to detect and label objects in the images.#### Cross validation
-This section should detail the cross validation strategy and justify your approach. The purpose of providing prelabeled ground truth bounding boxes and labels is to train and evaluate object detection models. The models learn to detect objects in new images by analyzing the patterns and features of the annotated images.
-prelabeled ground truth bounding boxes and labels such as cars, pedestrians and bycicles.  
-
-### Training
-#### Reference experiment
-This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
-
-#### Improve on the reference
-This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
